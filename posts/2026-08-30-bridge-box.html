@@ -15,11 +15,11 @@
 		<p class="sub">Jarvis, starship decks, and things I built myself</p>
 	</header>
 <main>
-	<h1><link src="https://github.com/EJones35/Bridge-Box/">Bridge Box Mk1</link> — Helm + Relay deck for EmptyEpsilon</h1><p class="meta">30 Aug 2026 — SXP 14:30, 2 Unos, OLED, joystick, 4x4 keypad</p>
+	<h1><link src="https://github.com/EJones35/Bridge-Box/">Bridge Box Mk1</link> - Helm + Relay deck for EmptyEpsilon</h1><p class="meta">30 Aug 2026 - SXP 14:30, 2 Unos, OLED, joystick, 4x4 keypad</p>
 		<h2>Wiring (Duponts off the breadboard)</h2>
 			<ul>
-				<li>Breadboard red = <code>Uno 5V</code>, blue = <code>GND</code> — all modules tap those rails</li>
-				<li>OLED 0.96" SSD1306 (GND VCC SCK SDA) -> <code>GND blue, VCC red, SDA A4, SCL A5</code> — <code>0x3C</code>, 6px XOFF</li>
+				<li>Breadboard red = <code>Uno 5V</code>, blue = <code>GND</code> - all modules tap those rails</li>
+				<li>OLED 0.96" SSD1306 (GND VCC SCK SDA) -> <code>GND blue, VCC red, SDA A4, SCL A5</code> - <code>0x3C</code>, 6px XOFF</li>
 				<li>Joystick -> <code>VRx A0, VRy A1, SW D2, VCC red, GND blue</code></li>
 				<li>4x4 keypad -> <code>R1-4 D6 D7 D8 D9, C1-4 D10 D11 D12 D13</code></li>
 			</ul>
@@ -28,7 +28,7 @@
 		<p>Modes: <code>RELAY &lt;-&gt; HELM</code> via <code>D</code>, OLED shows <code>MODE</code> + <code>Last key</code> + <code>Thrust:ON/OFF Turning:ON/OFF</code>. Libraries: <code>U8g2</code> + <code>Keypad</code>.</p>
 		
 		<h2>Python bridge</h2>
-		<p><code>bridge_box.py</code> — auto-finds <code>COM3</code>, maps per mode:</p>
+		<p><code>bridge_box.py</code> - auto-finds <code>COM3</code>, maps per mode:</p>
 		<h3>Helm</h3>
 		<h4>Impulse</h4>
 		<ul>
