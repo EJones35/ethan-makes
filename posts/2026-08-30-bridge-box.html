@@ -1,0 +1,26 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bridge Box Mk1 — ethan makes</title><link rel="stylesheet" href="../css/style.css"></head><body>
+<header><h1><a href="../index.html" style="color:inherit;text-decoration:none">ethan makes</a></h1><p class="sub">Jarvis, starship decks, and things I built myself</p></header>
+<main>
+<h1>Bridge Box Mk1 — Helm + Relay deck for EmptyEpsilon</h1><p class="meta">30 Aug 2026 — SXP 14:30, 2 Unos, OLED, joystick, 4x4 keypad</p>
+<h2>Wiring (Duponts off the breadboard)</h2>
+<ul>
+<li>Breadboard red = <code>Uno 5V</code>, blue = <code>GND</code> — all modules tap those rails</li>
+<li>OLED 0.96" SSD1306 (GND VCC SCK SDA) -> <code>GND blue, VCC red, SDA A4, SCL A5</code> — <code>0x3C</code>, 6px XOFF</li>
+<li>Joystick -> <code>VRx A0, VRy A1, SW D2, VCC red, GND blue</code></li>
+<li>4x4 keypad -> <code>R1-4 D6 D7 D8 D9, C1-4 D10 D11 D12 D13</code></li>
+</ul>
+<h2>Arduino</h2>
+<p><code>BridgeBox.ino</code> on <code>COM3</code> @115200 — modes <code>RELAY &lt;-&gt; HELM</code> via <code>D</code>, OLED shows <code>MODE</code> + <code>Last key</code> + <code>Thr:ON/OFF Tur:ON/OFF</code>. Libraries: <code>U8g2</code> + <code>Keypad</code>.</p>
+<h2>Python bridge</h2>
+<p><code>bridge_box.py</code> — auto-finds <code>COM3</code>, maps per mode:</p>
+<ul>
+<li>Relay: <code>1</code> Red, <code>2</code> Yellow, <code>3</code> Reset (via Alert Level menu at <code>5</code>), <code>0</code> Call FC — clicks with restore, <code>A</code> hold</li>
+<li>Helm: joystick <code>Up/Down Left/Right</code> hold, <code>1 2 3 A 4</code> impulse 0/25/50/75/100% (slider clicks from <code>helm_coords.txt</code>), <code>5 6 B 7 8</code> warp 0-4, <code>9</code> thrust toggle, <code>C</code> turn toggle, <code>0</code> dock, click toggles impulse/warp</li>
+</ul>
+<h2>Helm impulse via clicks</h2>
+<p>Grabbed with <code>grab_coords.py</code> + <code>F8</code> on the Helm slider — <code>1->44,650</code> etc. See <code>helm_coords.txt</code>.</p>
+<pre>python Coding\Python\BridgeBox\bridge_box.py
+# cycle D, Helm 9/C for locks, 1-4 for impulse, 5-8 for warp</pre>
+<p>Keybindings patched in <code>EmptyEpsilon/keybindings.json</code> for <code>HELMS_IMPULSE_*</code> and <code>WEAPONS_LOAD/FIRE_TUBE1-4</code>.</p>
+<p><a href="../index.html">← back</a></p>
+</main><footer>ethan makes</footer></body></html>
