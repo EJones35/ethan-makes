@@ -29,14 +29,30 @@
 		
 		<h2>Python bridge</h2>
 		<p><code>bridge_box.py</code> — auto-finds <code>COM3</code>, maps per mode:</p>
-		<ul>
-			<li>Relay: <code>1</code> Red, <code>2</code> Yellow, <code>3</code> Reset (via Alert Level menu at <code>5</code>), <code>0</code> Call FC — clicks with restore, <code>A</code> hold</li>
-			<li>Helm: joystick <code>Up/Down Left/Right</code> hold, <code>1 2 3 A 4</code> impulse 0/25/50/75/100% (slider clicks from <code>helm_coords.txt</code>), <code>5 6 B 7 8</code> warp 0-4, <code>9</code> thrust toggle, <code>C</code> turn toggle, <code>0</code> dock, click toggles impulse/warp</li>
-		</ul>
-		
-		<h2>Helm impulse via clicks</h2>
-		<p>Grabbed with <code>grab_coords.py</code> + <code>F8</code> on the Helm slider — <code>1->44,650</code> etc. See <code>helm_coords.txt</code>.</p>
-		<p>Keybindings patched in <code>EmptyEpsilon/keybindings.json</code> for <code>HELMS_IMPULSE_*</code>.</p>
+		<pre>Helm
+Impulse
+1 - Sets impulse to 0% 2 - Sets impulse to 25% 3 - Sets impulse to 50% A - Sets impulse to 75% 4 - Sets impulse to 100%
+
+*+2 - Sets impulse to -25% *+3 - Sets impulse to -50% *+4 - Sets impulse to -75% *+5 - Sets impulse to -100%
+
+Warp
+5 - Sets warp to level 0 6 - Sets warp to level 1 B - Sets warp to level 2 7 - Sets warp to level 3 8 - Sets warp to level 4
+
+Turning
+Joystick left - Turns the ship left Joystick right - Turns the ship right
+
+QOL Controls
+9 - Toggles if the joystick contols the speed of the ship C - Toggles if the joystick contols the turning of the ship
+
+Relay
+Alerts
+1 - Red alert 2 - Yellow alert 3 - Clear alert
+
+Mouse
+Joystick move - Move mouse Joystick click - Left click A - Toggle mouse hold (helpful in moving waypoints/the map)
+
+Custom
+0 - Call Flight Controller</pre>
 <p><a href="../index.html">← Back</a></p>
 </main>
 
