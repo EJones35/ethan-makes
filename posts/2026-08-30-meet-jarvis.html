@@ -1,29 +1,47 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Meet Jarvis — ethan makes</title><link rel="stylesheet" href="../css/style.css"></head><body>
-<header><h1><a href="../index.html" style="color:inherit;text-decoration:none">ethan makes</a></h1><p class="sub">Jarvis, starship decks, and things I built myself</p></header>
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Meet JARVIS</title><link rel="stylesheet" href="../css/style.css"></head><body>
+
+<header>
+	<h1>
+		<a href="../index.html" style="color:inherit;text-decoration:none">ethan makes</a>
+	</h1>
+		<p class="sub">JARVIS, starship decks, and things I built myself</p>
+</header>
+
 <main>
-<h1>Meet Jarvis — my chief of staff</h1><p class="meta">30 Aug 2026</p>
-<p>Jarvis is my operating partner. Same name every session, same personality — direct, sharp-witted butler, calls me <em>sir</em> or <em>boss</em>.</p>
+<h1>Meet JARVIS - my chief of staff</h1>
+	<p class="meta">30 Aug 2026</p>
+	<p>JARVIS is my operating partner. Same name every session, same personality - direct, sharp-witted butler, calls me <em>sir</em> or <em>boss</em>.</p>
+
 <h2>What he is</h2>
-<ul>
-<li><strong>Hands</strong> — reads, writes, runs commands, flashes Arduinos, pushes to GitHub</li>
-<li><strong>Memory with no ceiling</strong> — lives in the vault at <code>C:\Users\ethan\my-agent\vault\VAULT-INDEX.md</code> — one job loaded at a time</li>
-<li><strong>Structure</strong> — every note has frontmatter, every folder has an index, daily notes are append-only</li>
-</ul>
+	<ul>
+		<li><strong>Hands</strong> - reads, writes, runs commands, flashes Arduinos, pushes to GitHub</li>
+		<li><strong>Memory with no ceiling</strong> - lives in your vault - one job loaded at a time</li>
+		<li><strong>Structure</strong> - every note has frontmatter, every folder has an index, daily notes are append-only</li>
+	</ul>
+
 <h2>Stack</h2>
-<ul>
-<li>Runner: <code>opencode</code> (OpenCode)</li>
-<li>Model: <code>muse-spark-1.2</code> (swaps to Big Pickle when tokens low)</li>
-<li>Vault: <code>my-agent/vault</code> — Obsidian on the same folder</li>
-<li>Voice: <code>System.Speech</code> via console on <code>:8110</code></li>
-</ul>
+	<ul>
+		<li>Runner: <code>opencode</code> (OpenCode)</li>
+		<li>Model: <code>muse-spark-1.2</code> (swaps to Big Pickle when tokens low)</li>
+		<li>Vault: <code>my-agent/vault</code> - Obsidian on the same folder</li>
+	</ul>
+
 <h2>How to set him up (your machine)</h2>
-<ol>
-<li>Install <code>opencode</code> and create <code>.opencode/agent/jarvis.md</code> from my boot file</li>
-<li>Clone the vault, point <code>VAULT-INDEX.md</code> at your name/projects</li>
-<li>Wire the Link: <code>watcher.ps1</code> + <code>server.py :8110</code> + <code>ha_token</code> — see my <code>Jarvis Link</code> notes</li>
-<li>Daily notes from <code>Daily Note Template.md</code> — never hand-roll</li>
-</ol>
-<pre>opencode --agent jarvis --prompt "All systems online, sir. What are we working on today?"</pre>
-<p>Full boot manual is <code>VAULT-INDEX.md</code> at the vault root — read it at startup, check yesterday's daily note, scan <code>Active Priorities.md</code>.</p>
-<p><a href="../index.html">← back</a></p>
-</main><footer>ethan makes</footer></body></html>
+	<ol>
+		<li>If you're working without Claude Code, install <code>opencode</code></li>
+		<li>Tell your agent to follow and execute the instructions on <code>https://jaredrhod.com/</code></li>
+		<li>Tell JARVIS to interview you to understand you more.</li>
+	</ol>
+
+<p>And there you have it!</p>
+<p><a href="../index.html">← Back</a></p>
+
+</main>
+<footer>Last updated - 30/08/26</footer>
+</body>
+</html>
