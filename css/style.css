@@ -12,3 +12,7 @@ footer{text-align:center;opacity:.6;padding:2rem 1rem;border-top:1px solid #1f2a
 a{color:#7fb3ff}
 code,pre{background:#0f1420;border:1px solid #1f2a3a;border-radius:8px;padding:.2rem .4rem;overflow:auto}
 pre{padding:1rem}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin:1.2rem 0}
+.gallery figure{margin:0;background:#101722;border:1px solid #1f2a3a;border-radius:10px;overflow:hidden}
+.gallery img{width:100%;height:auto;display:block}
+.gallery figcaption{text-align:center;opacity:.6;font-size:.8rem;padding:.3rem}
